@@ -29,15 +29,22 @@ const CreaterSortTemplate = () => {
     </form>`
 };
 
-export default class Sort {
+class Sort {
   getTemplate() {
-    return CreaterSortTemplate();
+      return createSortTemplate();
   }
 
   getElement() {
-    if (this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-    return this.element;
+      if (!this.element) {
+          this.element = createElement(this.getTemplate());
+      }
+
+      return this.element;
+  }
+
+  removeElement() {
+      this.element = null;
   }
 }
+
+export default Sort;
