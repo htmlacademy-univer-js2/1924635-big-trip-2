@@ -1,7 +1,7 @@
 import { createElement } from '../render';
 
 const createTripListTemplate = () => {
-  return `<ul class="trip-events__list">
+  `<ul class="trip-events__list">
   </ul>`;
 };
 
