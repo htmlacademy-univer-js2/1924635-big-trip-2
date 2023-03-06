@@ -1,7 +1,7 @@
 import { createElement } from '../render';
 
 const createPointEditTemplate = () => {
-    `<li class="trip-events__item">
+  `<li class="trip-events__item">
     <form class="event event--edit" action="#" method="post">
       <header class="event__header">
         <div class="event__type-wrapper">
@@ -155,24 +155,24 @@ const createPointEditTemplate = () => {
         </section>
       </section>
     </form>
-  </li>`
+  </li>`;
 };
 
 class PointEdit {
     getTemplate() {
-        return createPointEditTemplate();
+      return createPointEditTemplate();
     }
 
     getElement() {
-        if (!this.element) {
-            this.element = createElement(this.getTemplate());
-        }
+      if (!this.element) {
+        this.element = createElement(this.getTemplate());
+      }
 
-        return this.element;
+      return this.element;
     }
 
     removeElement() {
-        this.element = null;
+      this.element = null;
     }
 }
 
