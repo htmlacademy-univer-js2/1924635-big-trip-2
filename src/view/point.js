@@ -1,6 +1,6 @@
 import { createElement } from '../render';
 
-const createPointTemplate = () => {
+const createPointTemplate = () => (
   `<li class="trip-events__item">
     <div class="event">
       <time class="event__date" datetime="2019-03-18">MAR 18</time>
@@ -37,8 +37,8 @@ const createPointTemplate = () => {
         <span class="visually-hidden">Open event</span>
       </button>
     </div>
-  </li>`;
-};
+  </li>`
+);
 
 class Point {
   getTemplate() {
