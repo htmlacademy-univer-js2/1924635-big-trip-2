@@ -1,4 +1,4 @@
-import { createElement } from "../render";
+import { createElement } from '../render';
 
 const filtersTemplate = () => (`<form class="trip-filters" action="#" method="get">
 <div class="trip-filters__filter">
@@ -18,18 +18,20 @@ const filtersTemplate = () => (`<form class="trip-filters" action="#" method="ge
 
 <button class="visually-hidden" type="submit">Accept filter</button>
 </form>`
-)
+);
 
 export default class FiltersView {
   getTemplate() {
     return filtersTemplate;
   }
+
   getElement() {
     if (!this.element) {
       this.element = createElement(this.getTemplate());
     }
     return this.element;
   }
+
   removeElement() {
     this.element = null;
   }
