@@ -1,5 +1,5 @@
-import dayjs from 'dayjs'
-import { getRandomInteger, getRandomElement } from '../utils'
+import dayjs from 'dayjs';
+import { getRandomInteger, getRandomElement } from '../utils';
 
 const COUNT = 100;
 

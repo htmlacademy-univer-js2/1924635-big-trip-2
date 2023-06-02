@@ -5,8 +5,8 @@ export default class PointsModel {
 
   init(points, destinations, offers) {
     this.points = points;
-      this.destinations = destinations;
-      this.offers = offers;
+    this.destinations = destinations;
+    this.offers = offers;
   }
 
   getPoints() {
