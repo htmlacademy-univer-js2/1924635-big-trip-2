@@ -1,4 +1,4 @@
-import { createElement } from "../render";
+import { createElement } from '../render';
 
 const createFormTemplate = () => (`<li class="trip-events__item">
 <form class="event event--edit" action="#" method="post">
@@ -146,15 +146,13 @@ export default class CreateFormView {
   getTemplate() {
     return createFormTemplate;
   }
-  
   getElement() {
     if (!this.element) {
       this.element = createElement(this.getTemplate());
     }
     return this.element;
   }
-  
   removeElement() {
     this.element = null;
   }
-} 
+}

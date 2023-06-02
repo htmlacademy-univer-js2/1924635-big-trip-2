@@ -1,5 +1,5 @@
-import { createElement } from "../render";
-import { humanizePointDueDate, duration, getDate, getTime } from "../utils";
+import { createElement } from '../render';
+import { humanizePointDueDate, duration, getDate, getTime } from '../utils';
 
 const renderOffers = (allOffers, checkedOffers) => {
   let result = '';
@@ -64,14 +64,13 @@ export default class RoutePointView {
   getTemplate() {
     return routePointTemlate(this.point, this.destinations, this.offers);
   }
-    
+
   getElement() {
     if (!this.element) {
       this.element = createElement(this.getTemplate());
     }
     return this.element;
   }
-    
   removeElement() {
     this.element = null;
   }
