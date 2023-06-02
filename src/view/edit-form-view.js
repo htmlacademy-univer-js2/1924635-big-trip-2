@@ -141,12 +141,14 @@ export default class EditFormView {
   getTemplate() {
     return editFormTemplate(this.point, this.destinations, this.offers);
   }
+
   getElement() {
     if (!this.element) {
       this.element = createElement(this.getTemplate());
     }
     return this.element;
   }
+
   removeElement() {
     this.element = null;
   }
