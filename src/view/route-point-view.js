@@ -71,6 +71,7 @@ export default class RoutePointView {
     }
     return this.element;
   }
+
   removeElement() {
     this.element = null;
   }
