@@ -1,7 +1,7 @@
 export default class PointsModel {
-  #points = [];
-  #offers = [];
-  #destinations = [];
+  #points = []
+  #offers = []
+  #destinations = []
 
   init(points, destinations, offers) {
     this.#points = points;
