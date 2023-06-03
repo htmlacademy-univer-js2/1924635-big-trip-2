@@ -1,5 +1,5 @@
-import { createElement } from "../render";
-import { getDateTime } from "../utils";
+import { createElement } from '../render';
+import { getDateTime } from '../utils';
 
 const renderDestinationPictures = (pictures) => {
   let result = '';
@@ -146,14 +146,14 @@ export default class EditFormView {
   get template() {
     return editFormTemplate(this.#point, this.#destinations, this.#offers);
   }
-    
+
   get element() {
     if (!this.#element) {
       this.#element = createElement(this.template);
     }
     return this.#element;
   }
-    
+
   removeElement() {
     this.#element = null;
   }
