@@ -30,22 +30,14 @@ export default class EventsPresenter {
       render(new SortView(), this.#container);
       render(this.#eventsList, this.#container);
       for (const point of this.#boardPoints) {
-        this.#renderPoint(point);
+        this.#renderPoint(point)
       }
     }
   }
 
   #renderPoint = (point) => {
-    const pointComponent = new RoutePointView(
-      point,
-      this.#destinations,
-      this.#offers
-    );
-    const formEditComponent = new EditFormView(
-      point,
-      this.#destinations,
-      this.#offers
-    );
+    const pointComponent = new RoutePointView(point, this.#destinations, this.#offers)
+    const formEditComponent = new EditFormView(point, this.#destinations, this.#offers);
     const replacePointToEditForm = () => {
       replace(formEditComponent, pointComponent);
     };
@@ -53,24 +45,24 @@ export default class EventsPresenter {
       replace(pointComponent, formEditComponent);
     };
     const onEscKeyDown = (evt) => {
-      if (evt.key === "Escape" || evt.key === "Esc") {
+      if (evt.key === 'Escape' || evt.key === 'Esc') {
         evt.preventDefault();
         replaceEditFormToPoint();
-        document.removeEventListener("keydown", onEscKeyDown);
+        document.removeEventListener('keydown', onEscKeyDown);
       }
     };
     pointComponent.setClickHandler(() => {
       replacePointToEditForm();
-      document.addEventListener("keydown", onEscKeyDown);
+      document.addEventListener('keydown', onEscKeyDown);
     });
     formEditComponent.setClickHandler(() => {
       replaceEditFormToPoint();
-      document.removeEventListener("keydown", onEscKeyDown);
+      document.removeEventListener('keydown', onEscKeyDown);
     });
     formEditComponent.setSubmitHandler(() => {
       replaceEditFormToPoint();
-      document.removeEventListener("keydown", onEscKeyDown);
+      document.removeEventListener('keydown', onEscKeyDown);
     });
     render(pointComponent, this.#eventsList.element);
-  };
+  }
 }
