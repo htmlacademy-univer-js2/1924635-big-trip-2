@@ -1,4 +1,4 @@
-import AbstractView from "../framework/view/abstract-view";
+import AbstractView from '../framework/view/abstract-view';
 
 const sortTemplate = () => (`<form class="trip-events__trip-sort  trip-sort" action="#" method="get">
 <div class="trip-sort__item  trip-sort__item--day">
@@ -25,10 +25,10 @@ const sortTemplate = () => (`<form class="trip-events__trip-sort  trip-sort" act
   <input id="sort-offer" class="trip-sort__input  visually-hidden" type="radio" name="trip-sort" value="sort-offer" disabled>
   <label class="trip-sort__btn" for="sort-offer">Offers</label>
 </div>
-</form>`)
+</form>`);
 
 export default class SortView extends AbstractView{
-    get template() {
-      return sortTemplate();
-    }
+  get template() {
+    return sortTemplate();
+  }
 }
