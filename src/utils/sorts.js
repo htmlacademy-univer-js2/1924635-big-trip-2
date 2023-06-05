@@ -15,6 +15,6 @@ const SortComparers = {
   [SortType.DAY]: pointDayComparer,
   [SortType.PRICE]: pointPriceComparer,
   [SortType.TIME]: pointTimeComparer
-}
+};
 
 export { SortComparers };
