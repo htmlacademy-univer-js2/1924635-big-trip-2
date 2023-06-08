@@ -25,4 +25,13 @@ const updateItem = (items, update) => {
   ];
 };
 
-export { getRandomInteger, updateItem, getRandomElement };
+const toUpperCaseFirstLetter = (value) => {
+  if (value === null || value === "") {
+    return value;
+  }
+  const firstLetter = value[0].toUpperCase();
+  const otherLetters = value.slice(1);
+  return firstLetter + otherLetters;
+}
+
+export { getRandomInteger, updateItem, getRandomElement, toUpperCaseFirstLetter };

@@ -86,9 +86,9 @@ const generatePoint = () => {
     isFavorite: Boolean(getRandomInteger()),
     offerIds: Array.from({ length: getRandomInteger(0, allOfferIdsByTypePoint.length) }).map(() => allOfferIdsByTypePoint[getRandomInteger(0, allOfferIdsByTypePoint.length - 1)]),
     type: offersByTypePoint.type,
-  };
+  }
 };
 
 const getPoints = () => Array.from({ length: COUNT }).map(() => generatePoint());
 
-export { getPoints, getDestinations, getOffersByType };
+export { getPoints, getDestinations, getOffersByType, TYPES };
