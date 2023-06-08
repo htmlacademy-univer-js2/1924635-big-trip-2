@@ -86,6 +86,6 @@ export default class EventsPresenter {
   };
 
   #hideEditForms = () => {
-    this.#pointsPresenters.forEach((presenter) => presenter.resetViewToDefault());
+    this.#pointsPresenters.forEach((presenter) => presenter.resetViewToDefault())
   }
 }

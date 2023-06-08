@@ -53,10 +53,10 @@ const generateDestination = (id) => ({
   id,
   description: generateDescription(),
   name: DESTINATIONS[id],
-  pictures: Array.from({ length: getRandomInteger(ElementsCount.MIN, ElementsCount.MAX) }, generatePicture),
+  pictures: Array.from({length: getRandomInteger(ElementsCount.MIN, ElementsCount.MAX)}, generatePicture),
 });
 
-const getDestinations = () => Array.from({ length: DESTINATIONS.length }).map((value, index) => generateDestination(index));
+const getDestinations = () => Array.from({length: DESTINATIONS.length}).map((value, index) => generateDestination(index));
 
 const generateOffer = (id, pointType) => ({
   id,
@@ -66,10 +66,10 @@ const generateOffer = (id, pointType) => ({
 
 const generateOffersByType = (pointType) => ({
   type: pointType,
-  offers: Array.from({ length: getRandomInteger(ElementsCount.MIN, ElementsCount.MAX) }).map((value, index) => generateOffer(index + 1, pointType)),
+  offers: Array.from({length: getRandomInteger(ElementsCount.MIN, ElementsCount.MAX)}).map((value, index) => generateOffer(index + 1, pointType)),
 });
 
-const getOffersByType = () => Array.from({ length: TYPES.length }).map((value, index) => generateOffersByType(TYPES[index]));
+const getOffersByType = () => Array.from({length: TYPES.length}).map((value, index) => generateOffersByType(TYPES[index]));
 
 const offersByType = getOffersByType();
 const destinations = getDestinations();
@@ -84,11 +84,11 @@ const generatePoint = () => {
     destinationId: getRandomElement(destinations).id,
     id: nanoid(),
     isFavorite: Boolean(getRandomInteger()),
-    offerIds: Array.from({ length: getRandomInteger(0, allOfferIdsByTypePoint.length) }).map(() => allOfferIdsByTypePoint[getRandomInteger(0, allOfferIdsByTypePoint.length - 1)]),
+    offerIds: Array.from({length: getRandomInteger(0, allOfferIdsByTypePoint.length)}).map(() => allOfferIdsByTypePoint[getRandomInteger(0, allOfferIdsByTypePoint.length - 1)]),
     type: offersByTypePoint.type,
-  }
+  };
 };
 
-const getPoints = () => Array.from({ length: COUNT }).map(() => generatePoint());
+const getPoints = () => Array.from({length: COUNT}).map(() => generatePoint());
 
-export { getPoints, getDestinations, getOffersByType, TYPES };
+export {getPoints, getDestinations, getOffersByType, TYPES };
