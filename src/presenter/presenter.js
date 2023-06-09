@@ -1,4 +1,3 @@
-import CreateFormView from '../view/create-form-view';
 import PointsListView from '../view/points-list-view';
 import SortView from '../view/sort-view';
 import EmptyPointsListView from '../view/empty-points-list-view';
@@ -39,18 +38,18 @@ export default class EventsPresenter {
 
   #renderNoPointsView = () => {
     render(new EmptyPointsListView(), this.#container);
-  }
+  };
 
   #renderSortView = () => {
     this.#sortPoint(this.#currentSortType);
     render(this.#sortComponent, this.#container);
     this.#sortComponent.setSortingHandler(this.#handleSortTypeChange);
-  }
+  };
 
   #renderPointsListView = () => {
     render(this.#pointsList, this.#container);
     this.#renderPoints();
-  }
+  };
 
   #renderPoints = () => {
     for (const point of this.#boardPoints) {
@@ -58,7 +57,7 @@ export default class EventsPresenter {
       pointPresenter.init(point);
       this.#pointsPresenters.set(point.id, pointPresenter);
     }
-  }
+  };
 
   #sortPoint = (sortType) => {
     this.#boardPoints.sort(SortComparers[sortType]);
@@ -77,7 +76,7 @@ export default class EventsPresenter {
   #clearPoints = () => {
     this.#pointsPresenters.forEach((presenter) => presenter.destroy());
     this.#pointsPresenters.clear();
-  }
+  };
 
   #pointChange = (updatedPoint) => {
     this.#boardPoints = updateItem(this.#boardPoints, updatedPoint);
@@ -86,6 +85,6 @@ export default class EventsPresenter {
   };
 
   #hideEditForms = () => {
-    this.#pointsPresenters.forEach((presenter) => presenter.resetViewToDefault())
+    this.#pointsPresenters.forEach((presenter) => presenter.resetViewToDefault());
   }
-}
+};
