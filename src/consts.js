@@ -78,5 +78,7 @@ const ApiServiceResponseMethod = {
   PUT: 'PUT'
 };
 
-export { UserAction, UpdateType, FilterType, SortType, NoPointsTextType, DisabledSortTypes, StartCheckedSortType, 
-  SortTypeDescriptions, FilterTypeDescriptions, PointTypes, PointTypesDescriptions, ApiServiceResponseMethod };
+export {
+  UserAction, UpdateType, FilterType, SortType, NoPointsTextType, DisabledSortTypes, StartCheckedSortType,
+  SortTypeDescriptions, FilterTypeDescriptions, PointTypes, PointTypesDescriptions, ApiServiceResponseMethod
+};
