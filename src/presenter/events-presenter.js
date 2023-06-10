@@ -25,7 +25,7 @@ export default class EventsPresenter {
   #filterType = null;
   #isLoading = null;
 
-  constructor({container, pointsModel, filterModel, destinationsModel, offersModel}) {
+  constructor({ container, pointsModel, filterModel, destinationsModel, offersModel }) {
     this.#container = container;
     this.#pointsModel = pointsModel;
     this.#filterModel = filterModel;
@@ -35,8 +35,8 @@ export default class EventsPresenter {
     this.#pointsListComponent = new PointsListView();
     this.#loadingComponent = new LoadingView();
     this.#pointNewPresenter = new PointNewPresenter({
-      pointListContainer: this.#pointsListComponent.element, 
-      changeData: this.#handleViewAction, 
+      pointListContainer: this.#pointsListComponent.element,
+      changeData: this.#handleViewAction,
       pointsModel: this.#pointsModel,
       destinationsModel: this.#destinationsModel,
       offersModel: this.#offersModel
@@ -97,7 +97,7 @@ export default class EventsPresenter {
     for (const point of points) {
       const pointPresenter = new PointPresenter({
         pointsListContainer: this.#pointsListComponent,
-        changeData: this.#handleViewAction, 
+        changeData: this.#handleViewAction,
         changeMode: this.#hideEditForms,
         destinationsModel: this.#destinationsModel,
         offersModel: this.#offersModel
@@ -121,7 +121,7 @@ export default class EventsPresenter {
         this.#renderBoard();
         break;
       case UpdateType.MAJOR:
-        this.#clearPoints({resetSortType: true});
+        this.#clearPoints({ resetSortType: true });
         this.#renderBoard();
         break;
       case UpdateType.INIT:
@@ -162,7 +162,7 @@ export default class EventsPresenter {
     this.#renderPointsList(points);
   };
 
-  #clearPoints =  ({resetSortType = false} = {}) => {
+  #clearPoints = ({ resetSortType = false } = {}) => {
     this.#pointNewPresenter.destroy();
     this.#pointsPresenters.forEach((presenter) => presenter.destroy());
     this.#pointsPresenters.clear();
