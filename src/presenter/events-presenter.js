@@ -105,15 +105,15 @@ export default class EventsPresenter {
     this.#uiBlocker.unblock();
   };
 
-  #renderNoPointsView = () => {
-    this.#emptyPointsListComponent = new EmptyPointsListView(this.#filterType);
-    render(this.#emptyPointsListComponent, this.#container, RenderPosition.AFTERBEGIN);
-  };
-
   #renderSortView = () => {
     this.#sortComponent = new SortView(this.#currentSortType);
     this.#sortComponent.setSortingHandler(this.#handleSortTypeChange);
     render(this.#sortComponent, this.#container, RenderPosition.AFTERBEGIN);
+  };
+
+  #renderNoPointsView = () => {
+    this.#emptyPointsListComponent = new EmptyPointsListView(this.#filterType);
+    render(this.#emptyPointsListComponent, this.#container, RenderPosition.AFTERBEGIN);
   };
 
   #renderPoints = (points) => {

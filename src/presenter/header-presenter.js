@@ -9,12 +9,9 @@ export default class HeaderPresenter {
   #filterContainer = null;
   #btnContainer = null;
   #menuContainer = null;
-
   #openCreatePointForm = null;
-
   #filtersModel = null;
   #pointsModel = null;
-
   #filterComponent = null;
   #newPointButtonComponent = null;
   #menuComponent = null;
@@ -68,9 +65,6 @@ export default class HeaderPresenter {
     this.#newPointButtonComponent = new NewPointButtonView();
     render(this.#newPointButtonComponent, this.#btnContainer);
     this.#newPointButtonComponent.setClickHandler(this.#handleNewPointButtonClick);
-    // if (this.#offersModel.offers.length === 0 || this.#destinationsModel.destinations.length === 0) {
-    //   this.#newPointButtonComponent.element.disabled = true;
-    // }
   };
 
   #handleNewPointFormClose = () => {
