@@ -18,7 +18,6 @@ export default class PointPresenter {
   #mode = Mode.DEFAULT;
   #destinationsModel = null;
   #offersModel = null;
-
   #changeData = null;
   #changeMode = null;
 
