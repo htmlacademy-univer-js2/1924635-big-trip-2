@@ -4,11 +4,11 @@ import PointsModel from './model/points-model';
 import FilterModel from './model/filter-model';
 import DestinationsModel from './model/destination-model';
 import OffersModel from './model/offers-model';
-import PointsApiService from './api-service/points-api-service';
 import DestinationsApiService from './api-service/destinations-api-service';
 import OffersApiService from './api-service/offers-api-service';
+import PointsApiService from './api-service/points-api-service';
 
-const AUTHORIZATION = 'Basic hGfqdqd01tqudb30';
+const AUTHORIZATION = 'Basic cAfqEvd21tquhp41';
 const END_POINT = 'https://18.ecmascript.pages.academy/big-trip';
 
 const siteHeaderElement = document.querySelector('.trip-main');
